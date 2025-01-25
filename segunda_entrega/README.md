@@ -35,12 +35,15 @@ segunda_entrega/
 └── setup.py
 ```
 
-- **`main.py`**: Script principal de ejemplo para usar las clases y métodos del paquete.
-- **`paquete`**: Carpeta que contiene los módulos:
-  - **`primer_modulo.py`**: Define las clases `Persona` y `Cliente`.
-  - **`segundo_modulo.py`**: Incluye funciones auxiliares para cálculo de descuentos, etc.
+- **`ModeloClientesJeshuaRomeroGuadarrama.egg-info/`**: Carpeta generada durante el proceso de instalación que incluye metadatos sobre la versión, dependencias, etc.
+- **`dist/`**: Directorio generado automáticamente tras la ejecución de `python setup.py sdist`. Contiene el archivo comprimido (`.tar.gz`) que se puede distribuir e instalar en otros equipos.
+- **`paquete/`**: Carpeta que encapsula el código fuente, el cual incluye:
+  - **`__init__.py`**: Indica a Python que esta carpeta es un paquete.
+  - **`primer_modulo.py`**: Define las clases `Persona` y `Cliente`, así como sus atributos/métodos.
+  - **`segundo_modulo.py`**: Incluye funciones auxiliares para cálculo de descuentos, así como transformaciones específicas, como descuentos o manejo de puntos
+- **`README.md`**: Documento explicativo sobre cómo usar e instalar el proyecto, describe sus características, dependencias y cualquier instrucción relevante para otros usuarios o desarrolladores.
+- **`main.py`**: Contiene el script principal que demuestra cómo crear instancias de las clases del paquete, interactuar con ellas (por ejemplo, registrar compras, mostrar historial, entre otras) y ejecutar funciones auxiliares.
 - **`setup.py`**: Archivo de instalación para generar el paquete.
-- **`README.md`**: Documento explicativo (este archivo).
 
 # Generar el paquete distribuible
 
