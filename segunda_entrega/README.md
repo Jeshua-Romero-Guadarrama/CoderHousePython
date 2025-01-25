@@ -56,8 +56,8 @@ Para crear la **distribución** del proyecto y permitir que se instale en otras 
    python setup.py sdist
    ```
 
-   Lo anterior generará una carpeta `dist/` que contendrá un archivo comprimido (en formato `.tar.gz`).  
-   En este caso es `ModeloClientesJeshuaRomeroGuadarrama-0.1.0.tar.gz`
+Lo anterior generará una carpeta `dist/` que contendrá un archivo comprimido (en formato `.tar.gz`).  
+En este caso es `ModeloClientesJeshuaRomeroGuadarrama-0.1.0.tar.gz`
 
 # Instalar en otra computadora
 
@@ -70,7 +70,7 @@ Para instalar el proyecto en otro entorno o máquina:
    pip install ModeloClientesJeshuaRomeroGuadarrama-0.1.0.tar.gz
    ```
 
-   Con ello, se instalará el paquete en el entorno de Python actual.
+Lo anterior instala el paquete en el entorno de Python actual.
 
 # Uso del paquete
 
