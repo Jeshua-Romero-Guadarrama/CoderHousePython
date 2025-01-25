@@ -5,8 +5,8 @@ Este proyecto ofrece un **modelo de clientes** para una página de compras en l�
 # Características principales
 
 - **Clases con herencia**: Incluye una clase base (`Persona`) y la clase derivada (`Cliente`).
-- **Atributos avanzados**: Cada cliente puede tener múltiples intereses, un nivel (Silver, Gold, Platinum), un historial de compras y puntos acumulados.
-- **Métodos de utilidad**: Para agregar intereses, registrar compras, cambiar de nivel, saludar, etc.
+- **Atributos avanzados**: Cada cliente puede tener múltiples intereses, un nivel (Plata, Oro, Platino), un historial de compras y puntos acumulados.
+- **Métodos de utilidad**: Para agregar intereses, registrar compras, cambiar de nivel, saludar, entre otros.
 - **Módulos auxiliares**: Funciones que calculan descuentos, aplican rebajas y muestran información detallada del cliente.
 - **Fácil de extender**: El diseño modular permite agregar más métodos o ajustes según necesidades específicas.
 
@@ -18,14 +18,21 @@ Este proyecto ofrece un **modelo de clientes** para una página de compras en l�
 # Estructura del proyecto
 
 ```text
-ModeloClientesJeshuaRomeroGuadarrama/
-├── main.py
+segunda_entrega/
+├── ModeloClientesJeshuaRomeroGuadarrama.egg-info
+│   ├── PKG-INFO
+│   ├── SOURCES.txt
+│   ├── dependency_links.txt
+│   └── top_level.txt
+├── dist
+│   └── ModeloClientesJeshuaRomeroGuadarrama-0.1.0.tar.gz
 ├── paquete
 │   ├── __init__.py
 │   ├── primer_modulo.py
 │   └── segundo_modulo.py
-├── setup.py
-└── README.md
+├── README.md
+├── main.py
+└── setup.py
 ```
 
 - **`main.py`**: Script principal de ejemplo para usar las clases y métodos del paquete.
