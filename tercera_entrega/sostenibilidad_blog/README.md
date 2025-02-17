@@ -121,10 +121,14 @@ sostenibilidad_blog/
    ```
    Página de inicio del blog.
 
-SuperUsuario ingresar con las siguientes credenciales en http://127.0.0.1:8000/admin/:
-Usuario: Romero
-COntraseña: Romero
+## Super Usuario 
 
-UsuarioNormal ingresar con las siguientes credenciales en http://127.0.0.1:8000/login/:
-Usuario: Pedro
-COntraseña: Pedro1946@
+Ingresar con las siguientes credenciales en http://127.0.0.1:8000/admin/:
+- Usuario: Romero
+- Contraseña: Romero
+
+## Usuario Normal 
+
+Ingresar con las siguientes credenciales en http://127.0.0.1:8000/login/:
+- Usuario: Pedro
+- Contraseña: Pedro1946@
