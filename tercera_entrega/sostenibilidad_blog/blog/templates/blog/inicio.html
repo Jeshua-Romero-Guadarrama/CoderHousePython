@@ -1,0 +1,22 @@
+{% extends 'blog/base.html' %}
+{% block content %}
+<div class="text-center">
+  <h2>Bienvenido(a) al Blog sobre Fintech, Neobanca y Ciencias de la Sostenibilidad</h2>
+  <p>
+    Explora artículos sobre <strong>Sostenibilidad</strong>, <strong>Fintech</strong> 
+    e <strong>Inclusión Financiera</strong> en México.
+  </p>
+
+  {% if user.is_authenticated %}
+    <p class="mt-4">
+      Hola, <strong>{{ user.username }}</strong>.  
+      Puedes navegar por las secciones de arriba para leer o buscar artículos.
+    </p>
+  {% else %}
+    <p class="mt-4">
+      ¿Eres nuevo? <a href="{% url 'registro' %}">Regístrate</a> o  
+      <a href="{% url 'login' %}">Inicia Sesión</a> para comentar en los artículos.
+    </p>
+  {% endif %}
+</div>
+{% endblock %}

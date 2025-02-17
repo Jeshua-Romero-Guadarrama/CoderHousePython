@@ -1,0 +1,54 @@
+sostenibilidad_blog/
+├── manage.py
+├── README.md
+├── requirements.txt             (listar dependencias)
+├── db.sqlite3                  (archivo de base de datos local, se crea tras migración)
+│
+├── blog/
+│   ├── __init__.py
+│   ├── admin.py
+│   ├── apps.py
+│   ├── forms.py
+│   ├── models.py
+│   ├── tests.py
+│   ├── views.py
+│   ├── urls.py
+│   ├── migrations/
+│   │   ├── __init__.py
+│   │   └── 0001_initial.py     (archivos de migración generados por Django)
+│   │
+│   ├── fixtures/
+│   │   └── datos_iniciales.json
+│   │
+│   └── templates/
+│       └── blog/
+│           ├── base.html
+│           ├── inicio.html
+│           ├── listar_sostenibilidad.html
+│           ├── listar_fintech.html
+│           ├── listar_inclusion.html
+│           ├── crear_sostenibilidad.html
+│           ├── crear_fintech.html
+│           ├── crear_inclusion.html
+│           ├── crear_autor.html
+│           ├── crear_categoria.html
+│           ├── crear_etiqueta.html
+│           ├── detalle_sostenibilidad.html
+│           ├── formulario_busqueda.html
+│           ├── resultados_busqueda.html
+│           └── registro.html
+│
+├── sostenibilidad_blog/
+│   ├── __init__.py
+│   ├── asgi.py
+│   ├── settings.py
+│   ├── urls.py
+│   └── wsgi.py
+│
+└── static/
+    ├── css/
+    │   └── estilo.css          (si tuviera hojas de estilo propias)
+    ├── js/
+    │   └── funciones.js        (si tuviera scripts propios)
+    └── img/
+        └── logo.png            (si tuviera imágenes)

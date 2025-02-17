@@ -1,0 +1,25 @@
+{% extends 'blog/base.html' %}
+{% load static %}
+{% block content %}
+<h2 class="mb-4">Crear Etiqueta</h2>
+
+<!-- Mensajes de éxito o error -->
+{% if messages %}
+  {% for message in messages %}
+    <div class="alert alert-success" role="alert">
+      {{ message }}
+    </div>
+  {% endfor %}
+{% endif %}
+
+<form method="POST" class="row g-3">
+  {% csrf_token %}
+  <div class="col-md-4">
+    {{ form.nombre.label_tag }}
+    {{ form.nombre }}
+  </div>
+  <div class="col-12">
+    <button type="submit" class="btn btn-hacker">Guardar</button>
+  </div>
+</form>
+{% endblock %}

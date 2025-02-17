@@ -1,0 +1,73 @@
+{% extends 'blog/base.html' %}
+{% load static %}
+{% block content %}
+<h2 class="mb-4">Detalle del Artículo de Sostenibilidad</h2>
+
+<!-- Mostramos los detalles del artículo de Sostenibilidad -->
+<div class="card bg-dark mb-3">
+  <div class="card-body">
+    <h3 class="card-title">{{ sostenibilidad.titulo }}</h3>
+    <p class="text-muted">Publicado el: {{ sostenibilidad.fecha_publicacion }}</p>
+    <p class="card-text">{{ sostenibilidad.contenido }}</p>
+
+    <!-- Categorías y etiquetas asociadas -->
+    {% if sostenibilidad.categorias.all %}
+      <p class="mb-1">
+        <strong>Categorías:</strong>
+        {% for cat in sostenibilidad.categorias.all %}
+          {{ cat.nombre }}{% if not forloop.last %}, {% endif %}
+        {% endfor %}
+      </p>
+    {% endif %}
+    {% if sostenibilidad.etiquetas.all %}
+      <p class="mb-1">
+        <strong>Etiquetas:</strong>
+        {% for etq in sostenibilidad.etiquetas.all %}
+          #{{ etq.nombre }}{% if not forloop.last %}, {% endif %}
+        {% endfor %}
+      </p>
+    {% endif %}
+  </div>
+</div>
+
+<hr>
+
+<!-- Sección de comentarios -->
+<h4>Comentarios ({{ comentarios.count }})</h4>
+
+{% if comentarios %}
+  {% for comentario in comentarios %}
+    <div class="mb-3 p-2" style="border-left: 3px solid #00ff9c;">
+      <strong>{{ comentario.autor }}</strong> -
+      <small class="text-secondary">
+        {{ comentario.fecha|date:"d/m/Y H:i" }}
+      </small>
+      <p class="mb-0">{{ comentario.contenido }}</p>
+    </div>
+  {% endfor %}
+{% else %}
+  <p>No hay comentarios todavía. ¡Sé el primero en comentar!</p>
+{% endif %}
+
+<hr>
+
+<!-- Formulario para agregar un nuevo comentario -->
+{% if user.is_authenticated %}
+  <h5>Agregar Comentario</h5>
+  <!-- Mensajes de éxito o error -->
+  {% if messages %}
+    {% for message in messages %}
+      <div class="alert alert-success" role="alert">
+        {{ message }}
+      </div>
+    {% endfor %}
+  {% endif %}
+  <form method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" class="btn btn-hacker">Comentar</button>
+  </form>
+{% else %}
+  <p>Debes <a href="{% url 'admin:login' %}">iniciar sesión</a> para dejar un comentario.</p>
+{% endif %}
+{% endblock %}

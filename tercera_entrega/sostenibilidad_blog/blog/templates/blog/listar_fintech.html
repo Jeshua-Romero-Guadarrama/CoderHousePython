@@ -1,0 +1,35 @@
+{% extends 'blog/base.html' %}
+{% block content %}
+<h2 class="mb-4">Artículos de Fintech</h2>
+
+{% if fintechs %}
+  <ul class="list-group">
+    {% for item in fintechs %}
+    <li class="list-group-item bg-dark text-light mb-2">
+      <strong>{{ item.titulo }}</strong><br>
+      <span class="text-secondary">Fecha: {{ item.fecha_publicacion }}</span>
+      <br>
+      {% if item.categorias.all %}
+        <small>Categorías: 
+          {% for cat in item.categorias.all %}
+            {{ cat.nombre }}{% if not forloop.last %}, {% endif %}
+          {% endfor %}
+        </small><br>
+      {% endif %}
+      {% if item.etiquetas.all %}
+        <small>Etiquetas: 
+          {% for etq in item.etiquetas.all %}
+            #{{ etq.nombre }}{% if not forloop.last %}, {% endif %}
+          {% endfor %}
+        </small><br>
+      {% endif %}
+      <br>
+      <!-- Si se quisiera un detalle en Fintech, habría que crear la vista y url. 
+           Por ahora, no se implementó detalle_fintech. -->
+    </li>
+    {% endfor %}
+  </ul>
+{% else %}
+  <p>No hay artículos de Fintech publicados aún.</p>
+{% endif %}
+{% endblock %}
