@@ -1,0 +1,29 @@
+{% extends 'blog/base.html' %}
+{% load static %}
+{% block content %}
+<h2 class="mb-4">Resultados de la Búsqueda</h2>
+
+{% if query %}
+  <p>Buscando por: <strong>{{ query }}</strong></p>
+
+  {% if results %}
+    <ul class="list-group">
+      {% for result in results %}
+        <li class="list-group-item bg-dark text-light mb-2">
+          <strong>{{ result.titulo }}</strong><br>
+          <span class="text-secondary">Fecha: {{ result.fecha_publicacion }}</span>
+          <br>
+          <!-- Link al detalle para ver comentarios -->
+          <a href="{% url 'detalle_sostenibilidad' result.pk %}" class="btn btn-hacker btn-sm mt-2">
+            Ver detalles
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
+  {% else %}
+    <p>No se encontraron resultados para <strong>{{ query }}</strong>.</p>
+  {% endif %}
+{% else %}
+  <p>No se ha ingresado ningún criterio de búsqueda.</p>
+{% endif %}
+{% endblock %}

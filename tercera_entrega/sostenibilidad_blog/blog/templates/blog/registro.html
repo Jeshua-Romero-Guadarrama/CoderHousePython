@@ -1,0 +1,51 @@
+{% extends 'blog/base.html' %}
+{% load static %}
+{% block content %}
+<h2 class="mb-4">Registro de Usuario</h2>
+
+<!-- Mensajes de éxito o error por medio de 'messages' -->
+{% if messages %}
+  {% for message in messages %}
+    <div class="alert alert-success" role="alert">
+      {{ message }}
+    </div>
+  {% endfor %}
+{% endif %}
+
+<!-- ERRORES DE FORMULARIO: si el UserCreationForm falla por password débil, usuario duplicado, etc. -->
+{% if form.errors %}
+  <div class="alert alert-danger">
+    <ul>
+      {# Errores de campos específicos #}
+      {% for field in form %}
+        {% for error in field.errors %}
+          <li><strong>{{ field.label }}:</strong> {{ error }}</li>
+        {% endfor %}
+      {% endfor %}
+      {# Errores generales (no ligados a un campo) #}
+      {% for error in form.non_field_errors %}
+        <li>{{ error }}</li>
+      {% endfor %}
+    </ul>
+  </div>
+{% endif %}
+
+<form method="POST" class="row g-3">
+  {% csrf_token %}
+  <div class="col-md-6">
+    {{ form.username.label_tag }}
+    {{ form.username }}
+  </div>
+  <div class="col-md-6">
+    {{ form.password1.label_tag }}
+    {{ form.password1 }}
+  </div>
+  <div class="col-md-6">
+    {{ form.password2.label_tag }}
+    {{ form.password2 }}
+  </div>
+  <div class="col-12">
+    <button type="submit" class="btn btn-hacker">Registrarse</button>
+  </div>
+</form>
+{% endblock %}

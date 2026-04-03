@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: ModeloClientesJeshuaRomeroGuadarrama
+Version: 0.1.0
+Summary: Modelo de Clientes para Página de Compras (POO)
+Author: Jeshua Romero Guadarrama
+Author-email: jeshua.romero@outlook.com
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6

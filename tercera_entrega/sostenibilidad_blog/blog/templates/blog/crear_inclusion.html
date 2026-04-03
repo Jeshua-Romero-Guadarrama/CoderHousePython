@@ -1,0 +1,41 @@
+{% extends 'blog/base.html' %}
+{% load static %}
+{% block content %}
+<h2 class="mb-4">Crear Artículo de Inclusión</h2>
+
+<!-- Mensajes de éxito o error -->
+{% if messages %}
+  {% for message in messages %}
+    <div class="alert alert-success" role="alert">
+      {{ message }}
+    </div>
+  {% endfor %}
+{% endif %}
+
+<form method="POST" class="row g-3">
+  {% csrf_token %}
+  <div class="col-md-6">
+    {{ form.titulo.label_tag }}
+    {{ form.titulo }}
+  </div>
+  <div class="col-12">
+    {{ form.contenido.label_tag }}
+    {{ form.contenido }}
+  </div>
+  <div class="col-md-6">
+    {{ form.fecha_publicacion.label_tag }}
+    {{ form.fecha_publicacion }}
+  </div>
+  <div class="col-md-6">
+    {{ form.categorias.label_tag }}
+    {{ form.categorias }}
+  </div>
+  <div class="col-md-6">
+    {{ form.etiquetas.label_tag }}
+    {{ form.etiquetas }}
+  </div>
+  <div class="col-12">
+    <button type="submit" class="btn btn-hacker">Guardar</button>
+  </div>
+</form>
+{% endblock %}

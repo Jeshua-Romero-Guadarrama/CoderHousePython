@@ -1,0 +1,108 @@
+[
+  {
+    "model": "auth.user",
+    "pk": 1,
+    "fields": {
+      "password": "pbkdf2_sha256$260000$YnqfUrT4sV8T$Uj8I6pKx5eW... (hash completo)",
+      "last_login": null,
+      "is_superuser": true,
+      "username": "Jeshua",
+      "first_name": "",
+      "last_name": "",
+      "email": "jeshua@example.com",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2025-02-17T00:00:00Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "blog.autor",
+    "pk": 1,
+    "fields": {
+      "nombre": "Jeshua Master",
+      "bio": "Autor principal y superusuario de la plataforma."
+    }
+  },
+  {
+    "model": "blog.categoria",
+    "pk": 1,
+    "fields": {
+      "nombre": "Economía Circular",
+      "descripcion": "Artículos que promueven el reciclaje y la reducción de residuos."
+    }
+  },
+  {
+    "model": "blog.categoria",
+    "pk": 2,
+    "fields": {
+      "nombre": "Mercados Financieros",
+      "descripcion": "Artículos que analizan tendencias y prácticas en los mercados financieros."
+    }
+  },
+  {
+    "model": "blog.etiqueta",
+    "pk": 1,
+    "fields": {
+      "nombre": "Blockchain"
+    }
+  },
+  {
+    "model": "blog.etiqueta",
+    "pk": 2,
+    "fields": {
+      "nombre": "Sostenible"
+    }
+  },
+  {
+    "model": "blog.etiqueta",
+    "pk": 3,
+    "fields": {
+      "nombre": "Inversión"
+    }
+  },
+  {
+    "model": "blog.sostenibilidad",
+    "pk": 1,
+    "fields": {
+      "titulo": "El Futuro de la Energía Renovable",
+      "contenido": "Contenido extenso sobre energías limpias, paneles solares y turbinas eólicas...",
+      "fecha_publicacion": "2025-02-01",
+      "categorias": [1],
+      "etiquetas": [2]
+    }
+  },
+  {
+    "model": "blog.fintech",
+    "pk": 1,
+    "fields": {
+      "titulo": "Criptomonedas en México",
+      "contenido": "Artículo sobre regulaciones, usos y adopción de criptomonedas...",
+      "fecha_publicacion": "2025-02-10",
+      "categorias": [2],
+      "etiquetas": [1]
+    }
+  },
+  {
+    "model": "blog.inclusion",
+    "pk": 1,
+    "fields": {
+      "titulo": "Banca Móvil para Todos",
+      "contenido": "Iniciativas que promueven el acceso a servicios financieros para comunidades rurales...",
+      "fecha_publicacion": "2025-02-15",
+      "categorias": [],
+      "etiquetas": [3]
+    }
+  },
+  {
+    "model": "blog.comentario",
+    "pk": 1,
+    "fields": {
+      "autor": 1,
+      "contenido": "¡Gran artículo! Me interesa la transición a energías limpias.",
+      "fecha": "2025-02-18T12:00:00Z",
+      "sostenibilidad": 1
+    }
+  }
+]

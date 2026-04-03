@@ -1,0 +1,9 @@
+README.md
+setup.py
+ModeloClientesJeshuaRomeroGuadarrama.egg-info/PKG-INFO
+ModeloClientesJeshuaRomeroGuadarrama.egg-info/SOURCES.txt
+ModeloClientesJeshuaRomeroGuadarrama.egg-info/dependency_links.txt
+ModeloClientesJeshuaRomeroGuadarrama.egg-info/top_level.txt
+paquete/__init__.py
+paquete/primer_modulo.py
+paquete/segundo_modulo.py
